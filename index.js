@@ -10,14 +10,13 @@ const convertBtn = document.getElementById("convert-btn")
 const lengthEl = document.getElementById("length")
 const volumeEl = document.getElementById("volume")
 const massEl = document.getElementById("mass")
-console.log(convertBtn)
 
 convertBtn.addEventListener( "click", function(){
     lengthUnit.push(inputEl.value)
     volumeUnit.push(inputEl.value)
     massUnit.push(inputEl.value)
     inputEl.value = ""
-    console.log(lengthUnit)
+    // console.log(lengthUnit)
     renderUnits()
     // renderUnits2()
     // renderUnits3()
@@ -57,8 +56,4 @@ function renderUnits3() {
                     <p>${massUnit[i]} kilos = ${massPound} pounds | ${massUnit[i]} pounds = ${massKilos} kilos</p>`
     }
     massEl.innerHTML = masses
-}
-
-function renderAll(){
-    if()
 }
