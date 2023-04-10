@@ -7,7 +7,6 @@
 }
 
 body{
-    height: 100vh;
     background: #1C1C1C;
     color: #FFFFFF;
 }
@@ -16,7 +15,7 @@ body{
     background: #1F2937;
     width: 550px;
     border-radius: 0px;
-    margin: 124px auto;
+    margin: 124px auto 124px auto;
     display: flex;
     align-items: center;
     flex-direction: column;  
@@ -49,6 +48,11 @@ input{
     border: 2px solid #B295FF;
     padding: 10px;
     border-radius: 5px;
+}
+
+input:hover{
+    border: 2px solid #ffffff;
+    padding: 8px 30px;
 }
 
 input[type= "text"]{
