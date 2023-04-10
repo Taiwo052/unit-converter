@@ -114,6 +114,134 @@ p{
     letter-spacing: 0em;
     text-align: center;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    border: none;
+}
+
+body{
+    background: #1C1C1C;
+    color: #FFFFFF;
+}
+
+.container{
+    background: #1F2937;
+    width: 550px;
+    border-radius: 0px;
+    margin: 124px auto 124px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.display-input{
+    width: 100%;
+    background: #6943FF;
+    padding: 40px 51px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input{
+    min-width: 300px;
+    width: 20px;
+    background: none;
+    border: 2px solid #B295FF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:hover{
+    border: 2px solid #ffffff;
+    padding: 8px 30px;
+}
+
+input[type= "text"]{
+    font-family: 'Inter', sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+button{
+    width: 200px;
+    margin-top: 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 10px 32px;
+    text-align: center;
+    border-radius: 5px;
+    color: #3D3D3D;
+    /* transition: all 300ms; */
+}
+
+button:hover{
+    border: 2px solid #B295FF;
+    padding: 8px 30px;
+}
+
+.unit-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 36px 0;
+}
+
+h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #CCC1FF;   
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* .section{
+    width: 500px;
+    background: #273549;
+    padding: 32px 77px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+} */
+
 
 #length{
     width: 500px;

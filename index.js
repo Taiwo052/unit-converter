@@ -1,59 +1,24 @@
-
-// 1 meter = 3.281 feet
-// 1 liter = 0.264 gallon
-// 1 kilogram = 2.204 pound
-let lengthUnit = []
-let volumeUnit = []
-let massUnit = []
-const inputEl = document.getElementById("input-el")
-const convertBtn = document.getElementById("convert-btn")
-const lengthEl = document.getElementById("length")
+let convertBtn = document.getElementById("convert-btn")
+let inputEl = document.getElementById("input-el")
+let lengthEl = document.getElementById("length")
 const volumeEl = document.getElementById("volume")
 const massEl = document.getElementById("mass")
 
-convertBtn.addEventListener( "click", function(){
-    lengthUnit.push(inputEl.value)
-    volumeUnit.push(inputEl.value)
-    massUnit.push(inputEl.value)
-    inputEl.value = ""
-    // console.log(lengthUnit)
-    renderUnits()
-    // renderUnits2()
-    // renderUnits3()
-    lengthUnit = []
-    // volumeUnit = []
-    // massUnit = []
+const meterToFeet =  3.281
+const literToGallon =  0.264
+const kiloToPound =  2.204
+
+convertBtn.addEventListener("click", function() {
+    let baseValue = inputEl.value
+    
+    lengthEl.innerHTML = `<h3>Length (Meter/Feet)</h3>
+                        <p>${baseValue} meter(s) = ${(baseValue * meterToFeet).toFixed(3)} feet | ${baseValue} feet = ${(baseValue / meterToFeet).toFixed(3)} meter(s)</p>`
+    volumeEl.innerHTML = `<h3>Volume (Litres/Gallons)</h3>
+                        <p>${baseValue} liter(s) = ${(baseValue * literToGallon).toFixed(3)} gallon(s) | ${baseValue} gallons = ${(baseValue / literToGallon).toFixed(3)} liters</p>` 
+    massEl.innerHTML = `<h3>Mass (Kilograms/Pounds)</h3>
+                        <p>${baseValue} kilo(s) = ${(baseValue * kiloToPound).toFixed(3)} pound(s) | ${baseValue} pound(s) = ${(baseValue / kiloToPound).toFixed(3)} kilo(s)</p>`
+                        
+    
+    inputEl.value = ""  
 })
 
-function renderUnits() {
-    let lengths = ""
-    for ( let i = 0; i < lengthUnit.length; i++){
-        lengthFeet = (lengthUnit[i] * 3.281).toFixed(3)
-        lengthMeters = (lengthUnit[i] / 3.281).toFixed(3)
-        lengths += `<h2>Length (Meter/Feet)</h2>
-                    <p>${lengthUnit[i]} meters = ${lengthFeet} feet | ${lengthUnit[i]} feet = ${lengthMeters} meters</p>`
-    }
-    lengthEl.innerHTML = lengths
-}
-
-function renderUnits2() {
-    let volumes = ""
-    for ( let i = 0; i < volumeUnit.length; i++){
-        volumeGallon = (volumeUnit[i] * 0.264).toFixed(3)
-        volumeLitre = (volumeUnit[i] / 0.264).toFixed(3)
-        volumes += `<h2>Volume (Litres/Gallons)</h2>
-                    <p>${volumeUnit[i]} liters = ${volumeGallon} gallons | ${volumeUnit[i]} gallons = ${volumeLitre} liters</p>`
-    }
-    volumeEl.innerHTML = volumes
-}
-
-function renderUnits3() {
-    let masses = ""
-    for ( let i = 0; i < massUnit.length; i++){
-        massPound = (massUnit[i] * 2.204).toFixed(3)
-        massKilos = (massUnit[i] / 2.204).toFixed(3)
-        Masses += `<h2>Mass (Kilograms/Pounds)</h2>
-                    <p>${massUnit[i]} kilos = ${massPound} pounds | ${massUnit[i]} pounds = ${massKilos} kilos</p>`
-    }
-    massEl.innerHTML = masses
-}
